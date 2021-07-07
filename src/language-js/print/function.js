@@ -87,7 +87,7 @@ function printFunction(path, print, options, args) {
   }
 
   if (node.id) {
-    parts.push(print("id"));
+    parts.push(print("id"), " ");
   }
 
   const parametersDoc = printFunctionParameters(
