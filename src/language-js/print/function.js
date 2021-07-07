@@ -142,7 +142,8 @@ function printMethod(path, options, print) {
 
   parts.push(
     printPropertyKey(path, options, print),
-    node.optional || node.key.optional ? "?" : ""
+    node.optional || node.key.optional ? "?" : "",
+    " "
   );
 
   if (node === value) {
