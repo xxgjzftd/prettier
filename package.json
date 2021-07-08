@@ -1,6 +1,6 @@
 {
   "name": "@xxgjzftd/prettier",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Prettier is an opinionated code formatter",
   "bin": "./bin/prettier.js",
   "repository": "xxgjzftd/prettier",
