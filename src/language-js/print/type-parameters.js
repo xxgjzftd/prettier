@@ -13,7 +13,6 @@ const {
   getFunctionParameters,
 } = require("../utils");
 const { createGroupIdMapper } = require("../../common/util");
-const { shouldHugType } = require("./type-annotation");
 
 const getTypeParametersGroupId = createGroupIdMapper("typeParameters");
 
@@ -34,10 +33,7 @@ function printTypeParameters(path, options, print, paramsKey) {
 
   const shouldInline =
     isParameterInTestCall ||
-    node[paramsKey].length === 0 ||
-    (node[paramsKey].length === 1 &&
-      (shouldHugType(node[paramsKey][0]) ||
-        node[paramsKey][0].type === "NullableTypeAnnotation"));
+    node[paramsKey].length === 0
 
   if (shouldInline) {
     return [
